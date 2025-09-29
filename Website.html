@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Build a Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        nav {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        section {
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        #home {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #home h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            padding-bottom: 45%;
+            margin-top: 2rem;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: #764ba2;
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #e83e8c;
+        }
+
+        .code-block {
+            background: #282c34;
+            color: #abb2bf;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            font-family: 'Courier New', monospace;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 1rem;
+            border-left: 4px solid #ffc107;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        section:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .step {
+            background: white;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#html">HTML Basics</a></li>
+            <li><a href="#css">CSS Styling</a></li>
+            <li><a href="#hosting">Hosting</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1>Welcome to Our Website Tutorial! 🎉</h1>
+        <p>You've been rickrolled! Now let's learn how to build websites...</p>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <section id="intro">
+        <h2>Introduction to Web Development</h2>
+        <p>Building a website is easier than you think! A website is made up of three core technologies:</p>
+        
+        <div class="step">
+            <h3>📝 HTML (Structure)</h3>
+            <p>HTML (HyperText Markup Language) is the skeleton of your website. It defines the content and structure.</p>
+        </div>
+
+        <div class="step">
+            <h3>🎨 CSS (Style)</h3>
+            <p>CSS (Cascading Style Sheets) makes your website look beautiful by adding colors, fonts, layouts, and animations.</p>
+        </div>
+
+        <div class="step">
+            <h3>⚡ JavaScript (Interactivity)</h3>
+            <p>JavaScript adds interactivity and dynamic behavior to your website (we'll keep it simple for now!).</p>
+        </div>
+    </section>
+
+    <section id="html">
+        <h2>HTML Basics</h2>
+        <p>Every HTML document starts with a basic structure. Here's what you need:</p>
+
+        <div class="code-block">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My First Website&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;p&gt;This is my first website.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+
+        <h3>Common HTML Tags</h3>
+        <p><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> - Headings (h1 is largest)</p>
+        <p><code>&lt;p&gt;</code> - Paragraphs</p>
+        <p><code>&lt;a href="url"&gt;</code> - Links</p>
+        <p><code>&lt;img src="image.jpg"&gt;</code> - Images</p>
+        <p><code>&lt;div&gt;</code> - Container for grouping elements</p>
+        <p><code>&lt;nav&gt;</code> - Navigation menu</p>
+        <p><code>&lt;section&gt;</code> - Section of content</p>
+
+        <div class="highlight">
+            <strong>Pro Tip:</strong> Always close your HTML tags! What you open with <code>&lt;tag&gt;</code> must close with <code>&lt;/tag&gt;</code>
+        </div>
+    </section>
+
+    <section id="css">
+        <h2>CSS Styling</h2>
+        <p>CSS makes your website look amazing! You can add CSS in three ways:</p>
+
+        <h3>1. Inline CSS (not recommended)</h3>
+        <div class="code-block">&lt;p style="color: blue;"&gt;This text is blue&lt;/p&gt;</div>
+
+        <h3>2. Internal CSS (in the &lt;head&gt; tag)</h3>
+        <div class="code-block">&lt;style&gt;
+    p {
+        color: blue;
+        font-size: 18px;
+    }
+&lt;/style&gt;</div>
+
+        <h3>3. External CSS (best practice)</h3>
+        <p>Create a separate <code>style.css</code> file and link it:</p>
+        <div class="code-block">&lt;link rel="stylesheet" href="style.css"&gt;</div>
+
+        <h3>CSS Selectors</h3>
+        <div class="code-block">/* Element selector */
+h1 {
+    color: purple;
+}
+
+/* Class selector */
+.my-class {
+    background-color: lightblue;
+}
+
+/* ID selector */
+#my-id {
+    font-size: 24px;
+}</div>
+
+        <div class="highlight">
+            <strong>Remember:</strong> Use classes (.) for reusable styles and IDs (#) for unique elements!
+        </div>
+    </section>
+
+    <section id="hosting">
+        <h2>Hosting Your Website</h2>
+        <p>Once you've built your website, you need to put it online! Here are some free hosting options:</p>
+
+        <div class="step">
+            <h3>1. GitHub Pages (Recommended for beginners)</h3>
+            <p>✅ Free forever</p>
+            <p>✅ Easy to use with Git</p>
+            <p>✅ Custom domain support</p>
+            <p>📝 Perfect for static websites like this one!</p>
+        </div>
+
+        <div class="step">
+            <h3>2. Netlify</h3>
+            <p>✅ Drag and drop deployment</p>
+            <p>✅ Automatic HTTPS</p>
+            <p>✅ Great for beginners</p>
+        </div>
+
+        <div class="step">
+            <h3>3. Vercel</h3>
+            <p>✅ Lightning fast</p>
+            <p>✅ Great for modern frameworks</p>
+            <p>✅ Free tier available</p>
+        </div>
+
+        <h3>Basic Steps to Deploy:</h3>
+        <p>1. Create your HTML, CSS, and JS files</p>
+        <p>2. Sign up for a hosting service (like GitHub Pages)</p>
+        <p>3. Upload your files or connect your repository</p>
+        <p>4. Your website is live! 🎉</p>
+    </section>
+
+    <section id="conclusion">
+        <h2>Conclusion</h2>
+        <p>Congratulations! You now know the basics of web development:</p>
+        <p>✅ HTML structures your content</p>
+        <p>✅ CSS makes it look beautiful</p>
+        <p>✅ Hosting makes it accessible to the world</p>
+        
+        <div class="highlight">
+            <strong>Next Steps:</strong>
+            <p>• Practice building simple pages</p>
+            <p>• Learn JavaScript for interactivity</p>
+            <p>• Explore frameworks like React or Vue</p>
+            <p>• Most importantly: keep building and experimenting!</p>
+        </div>
+
+        <p style="text-align: center; margin-top: 2rem; font-size: 1.2rem;">
+            <strong>Never gonna give up on web development! 🚀</strong>
+        </p>
+    </section>
+
+</body>
+</html>
